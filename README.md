@@ -1,1 +1,2 @@
-10/10 calc
+### nice calc bro
+very basic calculator written in c
