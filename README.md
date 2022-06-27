@@ -1,6 +1,6 @@
-### nice calc bro
+##### nice calc bro
 very basic calculator written in c
 
-plans
+future plans
 - more calculations
 - ncurses version
