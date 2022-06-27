@@ -12,9 +12,10 @@ int main()
     // contrl = chosing which calculation to use
     // countOfNum: how many numbers gonna user use
     
-    while(1 == 1) // loop calc
+    while(1 == 1) // loop calculator until break or return
     {
-        printf("0. close calc\n1. addition\n2. subtraction\n3. multiplication\n4. division\n-> which calculation you want to do? ");
+        printf("0. close calc\n1. addition\n2. subtraction\n3. multiplication\n4. division\n");
+        printf("-> which calculation you want to do? ");
         scanf("%d", &contrl);
     
         if (contrl == 0) // close program when calcu is 0
@@ -57,18 +58,18 @@ int main()
 
 void add(int count)
 {
-    int res = 0, num[count];
+    float res = 0, num[count];
 
     printf("-- addition --\n");
 
     for (int i = 0; i < count; ++i)
     {
         printf("-> give num: ");
-        scanf("%d", &num[i]);
+        scanf("%f", &num[i]);
         res = num[i] + res;
     }
 
-    printf("\n-> result: %d", res);
+    printf("\n-> result: %.2f", res);
 }
 
 void sub(int count)
@@ -94,32 +95,32 @@ void sub(int count)
 
 void mult(int count)
 {
-    int res = 1, num[count];
+    float res = 1, num[count];
 
     printf("-- multiplication --\n");
 
     for (int i = 0; i < count; ++i)
     {
         printf("-> give num: ");
-        scanf("%d", &num[i]);
+        scanf("%f", &num[i]);
         res = num[i] * res;
     }
 
-    printf("\n-> result: %d", res);
+    printf("\n-> result: %.2f", res);
 }
 
 void div(int count)
 {
-    int res = 1, num[count];
+    float res = 1, num[count];
 
     printf("-- division --\n");
 
     for (int i = 0; i < count; ++i)
     {
         printf("-> give num: ");
-        scanf("%d", &num[i]);
+        scanf("%f", &num[i]);
         res = num[i] / res;
     }
 
-    printf("\n-> result: %d", res);
+    printf("\n-> result: %f", res);
 }
