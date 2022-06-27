@@ -73,18 +73,23 @@ void add(int count)
 
 void sub(int count)
 {
-    int res = 0, num[count];
+    float res = 0, num[count];
 
     printf("-- subtraction --\n");
 
     for (int i = 0; i < count; ++i)
     {
         printf("-> give num: ");
-        scanf("%d", &num[i]);
-        res = num[i] - res;
+        scanf("%f", &num[i]);
+
+        if (i == 0)
+            res = num[0];
+        
+        else
+            res = res - num[i];
     }
 
-    printf("\n-> result: %d", res);
+    printf("\n-> result: %.2f", res);
 }
 
 void mult(int count)
