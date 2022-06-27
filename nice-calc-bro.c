@@ -1,36 +1,38 @@
 #include <stdio.h>
 
-//*--- Start of Code ---*//
-
+// creating calculation functions 
 void add(int count);
 void sub(int count);
 void mult(int count);
 void div(int count);
 
-
 int main()
 {
-    int calcu, countOfNum;
+    int contrl, countOfNum;
+    // contrl = chosing which calculation to use
+    // countOfNum: how many numbers gonna user use
     
-    while(1 == 1)
+    while(1 == 1) // loop calc
     {
-        printf("0. close calc\n1. addition\n2. subtraction\n3. multiplication\n4. division\n");
-        printf("what calculation you want to do? ");
-        scanf("%d", &calcu);
+        printf("0. close calc\n1. addition\n2. subtraction\n3. multiplication\n4. division\n-> which calculation you want to do? ");
+        scanf("%d", &contrl);
     
-        if (calcu == 0)
+        if (contrl == 0) // close program when calcu is 0
+        {
+            printf("\n-> program is closed\n");
             return 0;
-        
-        else if (!(calcu >= 1 && calcu <= 4))
-            printf("\nplease give valid input");
+        }
+
+        else if (!(contrl >= 1 && contrl <= 4)) // warn user when given invalid input
+            printf("\n-> please give valid input");
 
         else
         {
-            printf("how many numbers you gonna use? ");
+            printf("-> how many numbers you gonna use? ");
             scanf("%d", &countOfNum);
             printf("\n");
             
-            switch (calcu)
+            switch (contrl) // control for which calculation user want to use
             {
                 case 1:
                 add(countOfNum);
@@ -61,12 +63,12 @@ void add(int count)
 
     for (int i = 0; i < count; ++i)
     {
-        printf("give num: ");
+        printf("-> give num: ");
         scanf("%d", &num[i]);
         res = num[i] + res;
     }
 
-    printf("\nresult: %d", res);
+    printf("\n-> result: %d", res);
 }
 
 void sub(int count)
@@ -77,12 +79,12 @@ void sub(int count)
 
     for (int i = 0; i < count; ++i)
     {
-        printf("give num: ");
+        printf("-> give num: ");
         scanf("%d", &num[i]);
         res = num[i] - res;
     }
 
-    printf("\nresult: %d", res);
+    printf("\n-> result: %d", res);
 }
 
 void mult(int count)
@@ -93,12 +95,12 @@ void mult(int count)
 
     for (int i = 0; i < count; ++i)
     {
-        printf("give num: ");
+        printf("-> give num: ");
         scanf("%d", &num[i]);
         res = num[i] * res;
     }
 
-    printf("\nresult: %d", res);
+    printf("\n-> result: %d", res);
 }
 
 void div(int count)
@@ -109,10 +111,10 @@ void div(int count)
 
     for (int i = 0; i < count; ++i)
     {
-        printf("give num: ");
+        printf("-> give num: ");
         scanf("%d", &num[i]);
         res = num[i] / res;
     }
 
-    printf("\nresult: %d", res);
+    printf("\n-> result: %d", res);
 }
