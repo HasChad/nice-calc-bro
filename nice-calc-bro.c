@@ -119,7 +119,12 @@ void div(int count)
     {
         printf("-> give num: ");
         scanf("%f", &num[i]);
-        res = num[i] / res;
+
+        if (i == 0)
+            res = num[0];
+        
+        else
+            res = res / num[i];
     }
 
     printf("\n-> result: %f", res);
