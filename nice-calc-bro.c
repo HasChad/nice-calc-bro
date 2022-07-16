@@ -28,6 +28,7 @@ int main()
             printf("\n-> please give valid input");
 
         else
+            printf("bunu yazan tosunn okuyana kosun");
         {
             printf("-> how many numbers you gonna use? ");
             scanf("%d", &countOfNum);
